@@ -1,0 +1,25 @@
+(MAC) Mysql 명령어
+# 설치 경로 이동
+cd /usr/local/mysql-8.0.32-macos13-arm64/bin
+
+# 실행
+./mysql -u root -p
+
+# 데이터베이스 확인
+show databases;
+
+# 데이터베이스 선택
+use databaseName;
+
+# 테이블 확인
+show tables;
+
+# chapter1.1
+# users 테이블 생성
+
+Create table users (
+	id varchar(10) primary key,
+	name varchar(20) not null,
+	password varchar(10) not null
+);
+

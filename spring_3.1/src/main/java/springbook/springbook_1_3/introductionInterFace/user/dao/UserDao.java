@@ -11,6 +11,7 @@ public class UserDao {
 
     private ConnectionMaker connectionMaker;
 
+    // ConnectionMaker 인터페이스를 구현받아 만든 커넥션 메이커로 생성자 세팅
    public UserDao() {
         connectionMaker = new NConnectionMaker();
    }

@@ -1,15 +1,17 @@
 package springbook.springbook_1_3.separationClass.user;
 
-import springbook.springbook_1_2.makeConnection_2.user.dao.NUserDao;
-import springbook.springbook_1_2.makeConnection_2.user.dao.UserDao;
-import springbook.springbook_1_2.makeConnection_2.user.domain.User;
 
+
+import springbook.springbook_1_3.separationClass.user.dao.UserDao;
+import springbook.springbook_1_3.separationClass.user.domain.User;
+
+import java.sql.Connection;
 import java.sql.SQLException;
 
 public class Main {
     public static void main(String[] args) throws SQLException, ClassNotFoundException {
 
-        UserDao dao = new NUserDao();
+        UserDao dao = new UserDao();
 
         User user = new User();
         user.setId("whiteship");

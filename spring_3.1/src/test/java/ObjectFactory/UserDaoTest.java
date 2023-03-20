@@ -1,17 +1,18 @@
+package ObjectFactory;
+
 import org.junit.jupiter.api.Test;
-import springbook.springbook_1_3.separationResponsibilities.user.dao.ConnectionMaker;
-import springbook.springbook_1_3.separationResponsibilities.user.dao.NConnectionMaker;
-import springbook.springbook_1_3.separationResponsibilities.user.dao.UserDao;
-import springbook.springbook_1_3.separationResponsibilities.user.domain.User;
+import springbook.springbook_1_3.objectFactory.user.dao.DaoFactory;
+import springbook.springbook_1_3.objectFactory.user.dao.UserDao;
+import springbook.springbook_1_3.objectFactory.user.domain.User;
+
 
 import java.sql.SQLException;
 
 public class UserDaoTest {
     @Test
     public static void main(String[] args) throws SQLException, ClassNotFoundException {
-        ConnectionMaker connectionMaker = new NConnectionMaker();
 
-        UserDao dao = new UserDao(connectionMaker);
+        UserDao dao = new DaoFactory().userDao();
         User user = new User();
 
         user.setId("whiteship");
